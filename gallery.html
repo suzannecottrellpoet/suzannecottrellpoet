@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Suzanne Cottrell</title>
+<meta name="description" content="A visual gallery of nature photography by Suzanne Cottrell, the images that accompany her poetry, fiction, and nature writing throughout the site.">
+
+<!--
+  PENDING ITEMS FOR THIS PAGE (gallery.html):
+  1. Each of the ten "More on the Way" photos now has a real <img> tag pointing
+     to a suggested filename in assets/, using .png as requested. To add a
+     photo: save the file into assets/ using the exact filename shown in the
+     src attribute below, and it will automatically appear, the dashed
+     "Image Pending" box will disappear on its own once the image loads
+     successfully (handled by the onerror fallback script on each image).
+  2. If you prefer different filenames, just tell me and I will update the
+     src attributes to match, no need to rename your files to fit mine.
+  3. Three of these photos (lake, box turtle, animal tracks in snow) also
+     appear as placeholders on other pages (Current Project, Books, Writing)
+     using .jpg placeholder names. Since this page now uses .png for them,
+     let me know if you want me to standardize all pages to the same .png
+     filenames for those three, so one saved file updates everywhere at once.
+  4. The other seven photos (pansies, pink azaleas, pink and white azaleas,
+     ginkgo leaves, glossy branch, tree bark detail, praying mantis) are only
+     placed here for now. Tell me if any should move to a specific page as an
+     editorial anchor instead of, or in addition to, appearing here.
+-->
+
+<script>
+  document.documentElement.classList.add('js-enabled');
+</script>
+<style>
+  :root {
+    --forest: #243d2d;
+    --forest-dark: #1a2e21;
+    --teal: #1b4d4a;
+    --emerald: #1e6f52;
+    --turquoise: #2e8c8a;
+    --deep-blue: #1f3a52;
+    --clay: #8c7355;
+    --bark: #5b4636;
+    --paper: #f6f2e9;
+    --card: #fffdf8;
+    --ink: #1e2420;
+    --ink-soft: #3c4740;
+    --border-soft: #d8d0bf;
+    --focus-ring: #2e8c8a;
+    --max-width: 1180px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", serif;
+    color: var(--forest-dark);
+    line-height: 1.25;
+    margin: 0 0 0.6em 0;
+  }
+
+  p {
+    margin: 0 0 1em 0;
+    color: var(--ink-soft);
+  }
+
+  a {
+    color: var(--teal);
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--emerald);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 0;
+    top: -4rem;
+    background: var(--forest);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    z-index: 1000;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Header and Navigation */
+  header.site-header {
+    background-color: var(--forest);
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .nav-wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .site-logo {
+    font-family: Georgia, "Iowan Old Style", serif;
+    color: #f6f2e9;
+    font-size: 1.3rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .site-logo:hover,
+  .site-logo:focus {
+    color: #a8ded8;
+  }
+
+  .site-logo span {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #b7c9bb;
+    margin-top: 0.15rem;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid #f6f2e9;
+    color: #f6f2e9;
+    font-size: 0.95rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  nav.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.main-nav a {
+    color: #e9e4d6;
+    text-decoration: none;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    padding: 0.4rem 0.2rem;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+  }
+
+  nav.main-nav a:hover,
+  nav.main-nav a:focus {
+    color: #ffffff;
+    border-bottom-color: var(--turquoise);
+  }
+
+  nav.main-nav a.current {
+    color: #ffffff;
+    border-bottom-color: var(--turquoise);
+  }
+
+  /* Dropdown nav */
+  .main-nav ul li.has-dropdown {
+    position: relative;
+  }
+
+  .main-nav ul li.has-dropdown > a::after {
+    content: " \25BE";
+    font-size: 0.7em;
+  }
+
+  .dropdown {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--forest-dark);
+    min-width: 210px;
+    padding: 0.4rem 0;
+    margin: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    display: none;
+    z-index: 600;
+  }
+
+  .main-nav ul li.has-dropdown:hover > .dropdown,
+  .main-nav ul li.has-dropdown:focus-within > .dropdown {
+    display: block;
+  }
+
+  .dropdown li {
+    width: 100%;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 0.6rem 1rem;
+    white-space: nowrap;
+    border-bottom: none;
+  }
+
+  .dropdown a:hover,
+  .dropdown a:focus {
+    background-color: rgba(255,255,255,0.08);
+  }
+
+  @media (max-width: 860px) {
+    .menu-toggle {
+      display: inline-block;
+    }
+    nav.main-nav {
+      display: none;
+      width: 100%;
+    }
+    nav.main-nav.is-open {
+      display: block;
+    }
+    nav.main-nav ul {
+      flex-direction: column;
+      gap: 0;
+      padding-bottom: 1rem;
+    }
+    nav.main-nav a {
+      display: block;
+      padding: 0.65rem 0.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav-wrap {
+      flex-wrap: wrap;
+    }
+    .dropdown {
+      position: static;
+      display: block;
+      box-shadow: none;
+      background-color: rgba(0,0,0,0.15);
+      padding-left: 1rem;
+    }
+    .main-nav ul li.has-dropdown > a::after {
+      content: "";
+    }
+  }
+
+  /* Layout helpers */
+  .section {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    color: var(--turquoise);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+    max-width: 42rem;
+  }
+
+  .section-intro {
+    max-width: 48rem;
+    font-size: 1.05rem;
+  }
+
+  .js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .js-enabled .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js-enabled .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: var(--turquoise);
+    color: #0c201e;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #3ea19e;
+    color: #0c201e;
+  }
+
+  /* Hero */
+  .gallery-hero {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--teal) 100%);
+    color: #f6f2e9;
+    padding: 4rem 1.5rem 4.5rem;
+  }
+
+  .gallery-hero .section-inner {
+    max-width: 50rem;
+  }
+
+  .gallery-hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.78rem;
+    color: #9fd6cf;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+
+  .gallery-hero h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .gallery-hero p {
+    color: #e3ded0;
+    font-size: 1.08rem;
+  }
+
+  /* Photo grid */
+  .photo-section {
+    background-color: var(--paper);
+  }
+
+  .photo-section.alt {
+    background-color: #efe8d6;
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2.2rem;
+  }
+
+  .photo-card {
+    background-color: var(--card);
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .photo-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .photo-card-body {
+    padding: 1rem 1.2rem 1.3rem;
+  }
+
+  .photo-card-body h3 {
+    font-size: 1.02rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .photo-card-body p {
+    font-size: 0.88rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .photo-card-body a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* Placeholder photo cards (dark section version) */
+  .coming-soon-section {
+    background-color: var(--deep-blue);
+    color: #e9eef1;
+  }
+
+  .coming-soon-section h2 {
+    color: #ffffff;
+  }
+
+  .placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.6rem;
+    margin-top: 2.2rem;
+  }
+
+  .placeholder-card {
+    background-color: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  /* Image wrapper: shows the real photo once it loads successfully,
+     falls back to the dashed "Image Pending" box if the file is missing. */
+  .placeholder-image-wrap {
+    position: relative;
+    height: 180px;
+    margin: 0.9rem;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .placeholder-image-wrap .placeholder-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .placeholder-image-wrap .img-missing-fallback {
+    display: none;
+    position: absolute;
+    inset: 0;
+    border: 2px dashed rgba(255,255,255,0.35);
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.03);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .placeholder-image-wrap.img-missing .placeholder-photo {
+    display: none;
+  }
+
+  .placeholder-image-wrap.img-missing .img-missing-fallback {
+    display: flex;
+  }
+
+  .img-missing-fallback svg {
+    width: 34px;
+    height: 34px;
+    fill: rgba(255,255,255,0.4);
+  }
+
+  .img-missing-fallback span {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+  }
+
+  .placeholder-card-body {
+    padding: 0 1.2rem 1.3rem;
+  }
+
+  .placeholder-card-body h3 {
+    color: #ffffff;
+    font-size: 0.98rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .placeholder-card-body p {
+    color: #cfd8da;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  /* Pathways */
+  .pathways-section {
+    background-color: var(--paper);
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2.3rem;
+  }
+
+  .card {
+    background-color: var(--card);
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .card-tag {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--emerald);
+    font-weight: 700;
+  }
+
+  .card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  .card-link {
+    margin-top: auto;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* Footer */
+  footer.site-footer {
+    background-color: var(--forest-dark);
+    color: #cfd8d2;
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
+    gap: 2rem;
+  }
+
+  .footer-inner h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-inner p {
+    color: #aab8ae;
+    font-size: 0.9rem;
+  }
+
+  footer.site-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer.site-footer ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  footer.site-footer a {
+    color: #cfd8d2;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  footer.site-footer a:hover,
+  footer.site-footer a:focus {
+    color: #a8ded8;
+  }
+
+  .connect-list li a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .connect-list svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    fill: #cfd8d2;
+  }
+
+  .connect-list a:hover svg,
+  .connect-list a:focus svg {
+    fill: #a8ded8;
+  }
+
+  .footer-bottom {
+    max-width: var(--max-width);
+    margin: 2.5rem auto 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.82rem;
+    color: #8fa093;
+  }
+
+  @media (max-width: 900px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="site-logo">Suzanne Cottrell<span>Poet &amp; Writer</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">
+      Menu
+    </button>
+    <nav class="main-nav" id="primaryNav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li class="has-dropdown">
+          <a href="writing.html">Writing</a>
+          <ul class="dropdown">
+            <li><a href="writing.html">Selected Writing</a></li>
+            <li><a href="current-project.html">Current Project</a></li>
+            <li><a href="publications.html">Publications</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="honors.html">Honors</a></li>
+        <li class="has-dropdown">
+          <a href="media.html">Media</a>
+          <ul class="dropdown">
+            <li><a href="media.html">Media &amp; Audio</a></li>
+            <li><a href="gallery.html" class="current" aria-current="page">Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- Hero -->
+  <section class="gallery-hero">
+    <div class="section-inner">
+      <span class="eyebrow">Gallery</span>
+      <h1>Gallery</h1>
+      <p>Suzanne photographs the same natural world she writes about. Below is a collection of images that appear throughout the site, shown here together, each one already paired with a piece of her writing.</p>
+    </div>
+  </section>
+
+  <!-- Flora -->
+  <section class="photo-section section">
+    <div class="section-inner">
+      <span class="section-label">Flora</span>
+      <h2 class="section-heading reveal">Blossoms and bark</h2>
+      <p class="section-intro reveal">Photographs of flowers and trees that accompany Suzanne's poetry collections and current project.</p>
+      <div class="photo-grid">
+        <article class="photo-card reveal">
+          <img src="Loblolly pine tree bark.jpg" alt="Close photograph of loblolly pine tree bark, photographed by Suzanne Cottrell" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Loblolly Pine Bark</h3>
+            <p>Featured on the Current Project page, accompanying the theme "Nature triggers memories."</p>
+            <a href="current-project.html">See it on Current Project</a>
+          </div>
+        </article>
+        <article class="photo-card reveal">
+          <img src="2 Thanksgiving cactus blossoms (1).PNG" alt="Photograph of a blooming Thanksgiving cactus blossom, photographed by Suzanne Cottrell" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Thanksgiving Cactus Blossom</h3>
+            <p>Featured on the Current Project page, accompanying the theme "A call to protect the natural world."</p>
+            <a href="current-project.html">See it on Current Project</a>
+          </div>
+        </article>
+        <article class="photo-card reveal">
+          <img src="Asiatic Lily.jpg" alt="Close-up photograph of an Asiatic lily in bloom, taken by Suzanne Cottrell" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Asiatic Lily</h3>
+            <p>Featured on the Contact page.</p>
+            <a href="contact.html">See it on Contact</a>
+          </div>
+        </article>
+        <article class="photo-card reveal">
+          <img src="Asiatic Lily.jpg" alt="Asiatic lily in bloom, photographed by Suzanne Cottrell" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Asiatic Lily, Honors</h3>
+            <p>Featured on the Honors page.</p>
+            <a href="honors.html">See it on Honors</a>
+          </div>
+        </article>
+        <article class="photo-card reveal">
+          <img src="Butterfly plant.jpg" alt="Photograph of a butterfly plant, photographed by Suzanne Cottrell" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Butterfly Plant</h3>
+            <p>Featured in the Nature Writing section of the Writing page.</p>
+            <a href="writing.html">See it on Writing</a>
+          </div>
+        </article>
+        <article class="photo-card reveal">
+          <img src="Seed Tick Blooms.jpg" alt="Seed tick blooms, photographed by Suzanne Cottrell" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Seed Tick Blooms</h3>
+            <p>Featured as a photo divider on the Publications page.</p>
+            <a href="publications.html">See it on Publications</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fauna -->
+  <section class="photo-section alt section">
+    <div class="section-inner">
+      <span class="section-label">Fauna</span>
+      <h2 class="section-heading reveal">Creatures along the way</h2>
+      <p class="section-intro reveal">Suzanne's writing often begins with a sighting. These photographs accompany the poems and themes they inspired.</p>
+      <div class="photo-grid">
+        <article class="photo-card reveal">
+          <img src="Orange Fruitilliary butterfly.jpg" alt="An orange fritillary butterfly resting on a lily blossom, photographed by Suzanne Cottrell" loading="lazy">
+          <div class="photo-card-body">
+            <h3>Fritillary Butterfly</h3>
+            <p>Featured on the Current Project page, accompanying the theme "Nature as beauty."</p>
+            <a href="current-project.html">See it on Current Project</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- More on the way: real img tags with .png filenames, ready for you to add the files -->
+  <section class="coming-soon-section section">
+    <div class="section-inner">
+      <span class="section-label" style="color:#8fd1cd;">More on the Way</span>
+      <h2 class="section-heading reveal">Photographs still finding their home</h2>
+      <p class="section-intro reveal" style="color:#cfd8da;">Suzanne has supplied several more photographs. Each card below already points to a filename in assets/, save your photo under that exact name and it will appear automatically, replacing the "Image Pending" box. Three have already been assigned a page.</p>
+      <div class="placeholder-grid">
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="LAKE VIEW.png" alt="A lake framed by trees under a blue sky" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Lake Framed by Trees</h3>
+          </div>
+        </article>
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="An Eastern box turtle.jpg" alt="A box turtle among grass and leaf litter" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Box Turtle in Grass and Leaf Litter</h3>
+          </div>
+        </article>
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="animal footstep.jpg" alt="Animal tracks in the snow" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Animal Tracks in Snow</h3>
+          </div>
+        </article>
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="pansies.jpg" alt="Yellow and purple pansies in a garden bed" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Pansies, Yellow and Purple</h3>
+          </div>
+        </article>
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="Fuchsia Azalea blooms.jpg" alt="Close detail of pink azaleas" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Pink Azaleas, Close Detail</h3>
+          </div>
+        </article>
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="blossom.jpg" alt="Pink and white azaleas together" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Pink and White Azaleas Together</h3>
+          </div>
+        </article>
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="Ginkgo tree and leaves.jpg" alt="Ginkgo leaves on a branch" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Ginkgo Leaves on a Branch</h3>
+          </div>
+        </article>
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="branch.jpg" alt="Glossy narrow-leafed branch, possibly holly or bay" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Glossy Narrow-Leafed Branch</h3>
+          </div>
+        </article>
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="Persimmon tree bark.jpg" alt="Close detail of tree bark" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Close Tree Bark Detail</h3>
+          </div>
+        </article>
+
+        <article class="placeholder-card reveal">
+          <div class="placeholder-image-wrap">
+            <img class="placeholder-photo" src="Praying mantis.jpg" alt="A praying mantis on pavement" loading="lazy" onerror="this.onerror=null;this.closest('.placeholder-image-wrap').classList.add('img-missing');">
+            <div class="img-missing-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Image Pending</span>
+            </div>
+          </div>
+          <div class="placeholder-card-body">
+            <h3>Praying Mantis on Pavement</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pathways -->
+  <section class="pathways-section section">
+    <div class="section-inner">
+      <span class="section-label">Continue Exploring</span>
+      <h2 class="section-heading reveal">Where to go from here</h2>
+      <div class="card-grid">
+        <article class="card reveal">
+          <span class="card-tag">Discover</span>
+          <h3>Writing by Category</h3>
+          <p>Browse selected poems and stories organized by form.</p>
+          <a class="card-link" href="writing.html">Visit the Writing page</a>
+        </article>
+        <article class="card reveal">
+          <span class="card-tag">Books</span>
+          <h3>Published Collections</h3>
+          <p>See Suzanne's four published books of poetry and prose.</p>
+          <a class="card-link" href="books.html">Visit Books</a>
+        </article>
+        <article class="card reveal">
+          <span class="card-tag">Listen</span>
+          <h3>Media and Audio</h3>
+          <p>Hear Suzanne's readings and a community radio feature.</p>
+          <a class="card-link" href="media.html">Visit Media</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>Suzanne Cottrell</h3>
+      <p>Author and writer working across poetry, fiction, personal narratives, and nature writing.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="honors.html">Honors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Site</h3>
+      <ul>
+        <li><a href="current-project.html">Current Project</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Connect with Suzanne</h3>
+      <ul class="connect-list">
+        <li>
+          <a href="https://www.linkedin.com/in/suzanne-cottrell-34158b6a/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.2 9.4h3.56V21H3.2zM9.5 9.4h3.41v1.59h.05c.47-.86 1.62-1.77 3.33-1.77 3.56 0 4.22 2.26 4.22 5.2V21h-3.56v-5.9c0-1.4-.02-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9.5z"/></svg>
+            <span>Connect with Suzanne on LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.amazon.com/author/suzannesuzyberrycottrell" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h2.2l1.1 5.1L10.6 7h1.9l1.3 5.1L15 7h2.1l-2.3 9h-2l-1.3-5-1.3 5h-2L6 7zm.3 12.3c3.3 2 8.1 2.1 11.6.2.3-.2.6.1.3.4-1.9 1.7-5.4 2.9-8.6 2.9-3.1 0-5.7-1-7.3-2.6-.2-.2 0-.5.3-.3.6.4 1.1.9 1.7 1.4z"/></svg>
+            <span>Find Suzanne's books on Amazon</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://suzannecottrell1.substack.com" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v2.6H4V4zm0 4.6h16V11H4V8.6zM4 13h16v7l-8-4.2L4 20v-7z"/></svg>
+            <span>Read Suzanne's Substack</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Suzanne Cottrell. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('primaryNav');
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if ('IntersectionObserver' in window && !prefersReducedMotion) {
+      var revealElements = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealElements.forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.classList.add('in-view');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

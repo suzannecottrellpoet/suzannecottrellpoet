@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books | Suzanne Cottrell</title>
+<meta name="description" content="Explore the published books of Suzanne Cottrell, including Nature Calls Outside My Window, Scarred Resilience, and Gifts of the Seasons, where poetry, nature, and memory meet.">
+<script>
+  document.documentElement.classList.add('js-enabled');
+</script>
+<style>
+  :root {
+    --forest: #243d2d;
+    --forest-dark: #1a2e21;
+    --teal: #1b4d4a;
+    --emerald: #1e6f52;
+    --turquoise: #2e8c8a;
+    --deep-blue: #1f3a52;
+    --clay: #8c7355;
+    --bark: #5b4636;
+    --paper: #f6f2e9;
+    --card: #fffdf8;
+    --ink: #1e2420;
+    --ink-soft: #3c4740;
+    --border-soft: #d8d0bf;
+    --focus-ring: #2e8c8a;
+    --max-width: 1180px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", serif;
+    color: var(--forest-dark);
+    line-height: 1.25;
+    margin: 0 0 0.6em 0;
+  }
+
+  p {
+    margin: 0 0 1em 0;
+    color: var(--ink-soft);
+  }
+
+  a {
+    color: var(--teal);
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--emerald);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 0;
+    top: -4rem;
+    background: var(--forest);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    z-index: 1000;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Header and Navigation */
+  header.site-header {
+    background-color: var(--forest);
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .nav-wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .site-logo {
+    font-family: Georgia, "Iowan Old Style", serif;
+    color: #f6f2e9;
+    font-size: 1.3rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .site-logo:hover,
+  .site-logo:focus {
+    color: #a8ded8;
+  }
+
+  .site-logo span {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #b7c9bb;
+    margin-top: 0.15rem;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid #f6f2e9;
+    color: #f6f2e9;
+    font-size: 0.95rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  nav.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.main-nav a {
+    color: #e9e4d6;
+    text-decoration: none;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    padding: 0.4rem 0.2rem;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+  }
+
+  nav.main-nav a:hover,
+  nav.main-nav a:focus {
+    color: #ffffff;
+    border-bottom-color: var(--turquoise);
+  }
+
+  nav.main-nav a.current {
+    color: #ffffff;
+    border-bottom-color: var(--turquoise);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .has-dropdown > a::after {
+    content: " \25BE";
+    font-size: 0.7em;
+  }
+
+  .dropdown {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--forest-dark);
+    min-width: 220px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    border-radius: 0 0 6px 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 600;
+  }
+
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown li {
+    margin: 0;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 0.65rem 1rem;
+    white-space: nowrap;
+    border-bottom: none;
+  }
+
+  .dropdown a:hover,
+  .dropdown a:focus {
+    background-color: rgba(255,255,255,0.08);
+  }
+
+  @media (max-width: 860px) {
+    .menu-toggle {
+      display: inline-block;
+    }
+    nav.main-nav {
+      display: none;
+      width: 100%;
+    }
+    nav.main-nav.is-open {
+      display: block;
+    }
+    nav.main-nav ul {
+      flex-direction: column;
+      gap: 0;
+      padding-bottom: 1rem;
+    }
+    nav.main-nav a {
+      display: block;
+      padding: 0.65rem 0.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav-wrap {
+      flex-wrap: wrap;
+    }
+    .dropdown {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      background-color: rgba(0,0,0,0.15);
+      display: block;
+      padding-left: 1rem;
+    }
+  }
+
+  /* Layout helpers */
+  .section {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    color: var(--turquoise);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+    max-width: 42rem;
+  }
+
+  .section-intro {
+    max-width: 48rem;
+    font-size: 1.05rem;
+  }
+
+  .js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .js-enabled .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js-enabled .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: var(--turquoise);
+    color: #0c201e;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #3ea19e;
+    color: #0c201e;
+  }
+
+  .btn-outline {
+    background: transparent;
+    border-color: var(--forest);
+    color: var(--forest);
+  }
+
+  .btn-outline:hover,
+  .btn-outline:focus {
+    background-color: rgba(36,61,45,0.08);
+    color: var(--forest-dark);
+  }
+
+  /* Books page hero */
+  .books-hero {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--teal) 100%);
+    color: #f6f2e9;
+    padding: 4rem 1.5rem 4.5rem;
+    text-align: left;
+  }
+
+  .books-hero .section-inner {
+    max-width: 48rem;
+  }
+
+  .books-hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.78rem;
+    color: #9fd6cf;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+
+  .books-hero h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .books-hero p {
+    color: #e3ded0;
+    font-size: 1.08rem;
+  }
+
+  /* Book blocks */
+  .books-section {
+    background-color: var(--paper);
+  }
+
+  .books-section:nth-of-type(even) {
+    background-color: #efe8d6;
+  }
+
+  .book-block {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 3rem;
+    align-items: start;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .book-block:last-child {
+    border-bottom: none;
+  }
+
+  .book-block.reverse {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .book-block.reverse .book-cover-wrap {
+    order: 2;
+  }
+
+  .book-block.reverse .book-copy {
+    order: 1;
+  }
+
+  @media (max-width: 820px) {
+    .book-block,
+    .book-block.reverse {
+      grid-template-columns: 1fr;
+    }
+    .book-block.reverse .book-cover-wrap,
+    .book-block.reverse .book-copy {
+      order: initial;
+    }
+    .book-cover-wrap {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .book-cover-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-cover-wrap img {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 16px 34px rgba(36,61,45,0.28);
+    border: 1px solid var(--border-soft);
+  }
+
+  .book-copy .card-tag {
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--emerald);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .book-copy h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .book-meta {
+    list-style: none;
+    margin: 0.4rem 0 1.2rem 0;
+    padding: 0;
+    font-size: 0.88rem;
+    color: var(--bark);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 0.3rem 1.5rem;
+  }
+
+  .book-meta li span {
+    font-weight: 600;
+    color: var(--forest-dark);
+  }
+
+  .book-description {
+    font-size: 1rem;
+  }
+
+  .book-links {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .praise-block {
+    background-color: var(--card);
+    border-left: 3px solid var(--turquoise);
+    padding: 1.1rem 1.3rem;
+    border-radius: 0 4px 4px 0;
+    margin: 1.2rem 0 1.4rem 0;
+  }
+
+  .praise-block p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--forest-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .praise-block footer {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.85rem;
+    color: var(--bark);
+    font-style: normal;
+  }
+
+  /* Photo accent */
+  .photo-accent {
+    background-color: #efe8d6;
+    text-align: center;
+  }
+
+  .photo-accent figure {
+    margin: 0 auto;
+    max-width: 620px;
+  }
+
+  .photo-accent img {
+    border-radius: 6px;
+    box-shadow: 0 10px 24px rgba(36,61,45,0.18);
+    margin: 0 auto;
+  }
+
+  .photo-accent figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: var(--bark);
+    font-style: italic;
+  }
+
+  /* Discovery note */
+  .discovery-section {
+    background-color: var(--deep-blue);
+    color: #e9eef1;
+    text-align: center;
+  }
+
+  .discovery-section h2 {
+    color: #ffffff;
+  }
+
+  .discovery-section p {
+    color: #cfd8da;
+    max-width: 36rem;
+    margin: 0 auto 1.4rem auto;
+  }
+
+  .discovery-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Also in progress */
+  .progress-section {
+    background-color: var(--paper);
+  }
+
+  .progress-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .progress-grid img {
+    border-radius: 6px;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    box-shadow: 0 10px 24px rgba(36,61,45,0.18);
+  }
+
+  .progress-eyebrow {
+    display: inline-block;
+    background-color: var(--emerald);
+    color: #f2faf6;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  .progress-themes {
+    list-style: none;
+    margin: 1rem 0 1.5rem 0;
+    padding: 0;
+  }
+
+  .progress-themes li {
+    padding-left: 1.4rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    color: var(--ink-soft);
+    font-family: Georgia, serif;
+    font-style: italic;
+  }
+
+  .progress-themes li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 8px;
+    height: 8px;
+    background-color: var(--turquoise);
+    border-radius: 50%;
+  }
+
+  @media (max-width: 820px) {
+    .progress-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Publications link */
+  .publications-cta {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--forest) 100%);
+    color: #f3efe3;
+    text-align: center;
+  }
+
+  .publications-cta h2 {
+    color: #ffffff;
+  }
+
+  .publications-cta p {
+    color: #e3ded0;
+    max-width: 36rem;
+    margin: 0 auto 1.6rem auto;
+  }
+
+  /* Footer */
+  footer.site-footer {
+    background-color: var(--forest-dark);
+    color: #cfd8d2;
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
+    gap: 2rem;
+  }
+
+  .footer-inner h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-inner p {
+    color: #aab8ae;
+    font-size: 0.9rem;
+  }
+
+  footer.site-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer.site-footer ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  footer.site-footer a {
+    color: #cfd8d2;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  footer.site-footer a:hover,
+  footer.site-footer a:focus {
+    color: #a8ded8;
+  }
+
+  .connect-list li a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .connect-list svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    fill: #cfd8d2;
+  }
+
+  .connect-list a:hover svg,
+  .connect-list a:focus svg {
+    fill: #a8ded8;
+  }
+
+  .footer-bottom {
+    max-width: var(--max-width);
+    margin: 2.5rem auto 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.82rem;
+    color: #8fa093;
+  }
+
+  @media (max-width: 900px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!--
+  BOOK COVER IMAGES
+  The four cover <img> elements below point to placeholder filenames inside the assets folder.
+  Save the real cover image files into assets/ using these exact names,
+  or tell me the real filenames and I will update the src attributes:
+
+  assets/book-cover-nature-calls.png
+  assets/book-cover-scarred-resilience.png
+  assets/book-cover-gifts-spring-summer.png
+  assets/book-cover-gifts-autumn-winter.png
+
+  PENDING CONTENT NOTES (do not remove until resolved):
+  - Nature Calls Outside My Window: publisher, exact page length, and ISBN have not been
+    confirmed; only the publication date (December 19, 2022) and dual Paperback/Kindle
+    format are confirmed. Add these fields once the Amazon listing is supplied.
+  - Sy Montgomery's endorsement blurb for Nature Calls Outside My Window has not yet been
+    supplied. Add a .praise-block to that entry once the exact wording is provided.
+  - A Kelsay Books product link for Nature Calls Outside My Window has not been supplied;
+    the button below links to the general kelsaybooks.com domain, which Suzanne herself
+    gave in her book summary.
+-->
+
+<!--
+  NEW PLACEHOLDER PHOTOGRAPH (below, in the "photo-accent" section)
+  This is the "one more picture" placeholder added to books.html per request.
+  Suzanne has supplied several new nature photographs that have not yet been saved as
+  files with confirmed filenames: pansies in a garden bed, pink azaleas, a close bark
+  detail, ginkgo leaves, a box turtle, a praying mantis, and animal tracks in snow.
+  Once a specific photograph is chosen for this page, replace src="assets/placeholder-books-photo.jpg"
+  below with the real filename, for example assets/pansies.jpg or assets/ginkgo-leaves.jpg,
+  and update the alt text to describe the actual image.
+-->
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="site-logo">Suzanne Cottrell<span>Poet &amp; Writer</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">
+      Menu
+    </button>
+    <nav class="main-nav" id="primaryNav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html" class="current" aria-current="page">Books</a></li>
+        <li class="has-dropdown">
+          <a href="writing.html">Writing</a>
+          <ul class="dropdown">
+            <li><a href="writing.html">Selected Writing</a></li>
+            <li><a href="current-project.html">Current Project</a></li>
+            <li><a href="publications.html">Publications</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="honors.html">Honors</a></li>
+        <li class="has-dropdown">
+          <a href="media.html">Media</a>
+          <ul class="dropdown">
+            <li><a href="media.html">Media &amp; Audio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- Books hero -->
+  <section class="books-hero">
+    <div class="section-inner">
+      <span class="eyebrow">Books</span>
+      <h1>Books</h1>
+      <p>Explore Suzanne Cottrell's published books, where poetry, nature, memory, and observation meet. Each collection gathers work written over years of close attention to the natural world and to the life lived alongside it.</p>
+    </div>
+  </section>
+
+  <!-- New placeholder photograph -->
+  <section class="section photo-accent">
+    <div class="section-inner">
+      <figure class="reveal">
+        <img src="suzanne with her books.jpeg" alt="Nature photograph by Suzanne Cottrell, placeholder pending final photo selection and filename" loading="lazy">
+        <figcaption>Photograph by Suzanne Cottrell</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Book 1: Nature Calls Outside My Window (December 19, 2022) -->
+  <section class="books-section section">
+    <div class="section-inner">
+      <div class="book-block">
+        <div class="book-cover-wrap">
+          <img src="Nature Calls Outside My Window.jpg" alt="Book cover of Nature Calls Outside My Window, A Collection of Poems and Stories by Suzanne Cottrell" loading="lazy">
+        </div>
+        <div class="book-copy">
+          <span class="card-tag">Hybrid Collection</span>
+          <h2>Nature Calls Outside My Window, A Collection of Poems and Stories</h2>
+          <ul class="book-meta">
+            <li><span>Published:</span> December 19, 2022</li>
+            <li><span>Format:</span> Paperback and Kindle Edition</li>
+          </ul>
+          <p class="book-description">Celebrate our natural world of unforeseen discoveries, breathtaking moments, anxious situations, and humorous instances with Nature Calls Outside My Window, A Collection of Poems and Stories by Suzanne Cottrell. The book contains 67 poems and 12 personal narratives that entertain, inform, and encourage immersion in the outdoors and are suitable for readers of all ages. Suzanne invites you to join her and her trusted companions, their family dogs, on walks across their rural property, as well as on hikes through nature preserves and parks. Experience the sightings of fauna from the rare to the ordinary: a breaching humpback whale, an elusive bobcat, a groundhog up a tree, a snake in a bathtub, ruby-throated hummingbirds at feeders, and ladybugs in the garden. Enjoy nature's kaleidoscope of colors, textures, smells, and the symphony of sounds as told through her words. Through her observations of the natural world, you can see examples of the importance of interconnection, patience, and resilience. She hopes her readers will be stewards of nature.</p>
+          <div class="book-links">
+            <a class="btn btn-primary" href="https://www.amazon.com/Nature-Calls-Outside-Window-Collection-ebook/dp/B0BRYPQY8K" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+            <a class="btn btn-outline" href="https://www.kelsaybooks.com" target="_blank" rel="noopener noreferrer">View at Kelsay Books</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book 2: Scarred Resilience (July 10, 2021) -->
+  <section class="books-section section">
+    <div class="section-inner">
+      <div class="book-block reverse">
+        <div class="book-cover-wrap">
+          <img src="Scarred Resilience.jpg" alt="Book cover of Scarred Resilience by Suzanne Cottrell" loading="lazy">
+        </div>
+        <div class="book-copy">
+          <span class="card-tag">Poetry Collection</span>
+          <h2>Scarred Resilience</h2>
+          <ul class="book-meta">
+            <li><span>Publisher:</span> Kelsay Books</li>
+            <li><span>Published:</span> July 10, 2021</li>
+            <li><span>Format:</span> Paperback</li>
+            <li><span>Length:</span> 56 pages</li>
+            <li><span>ISBN-10:</span> 1954353812</li>
+            <li><span>ISBN-13:</span> 978-1954353817</li>
+          </ul>
+          <div class="praise-block">
+            <p>"Suzanne Cottrell's poems create verbal jewels inspired by the natural world. These poems offer a healing movement of spirit, reminding us why we fell in love with poetry in the first place."</p>
+            <footer>Marilyn Kallet, Knoxville Poet Laureate, author of <em>How Our Bodies Learned</em></footer>
+          </div>
+          <p><a class="btn btn-primary" href="https://www.amazon.com/Scarred-Resilience-Suzanne-Cottrell/dp/1954353812" target="_blank" rel="noopener noreferrer">View on Amazon</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book 3: Gifts of the Seasons, Spring and Summer (January 13, 2021) -->
+  <section class="books-section section">
+    <div class="section-inner">
+      <div class="book-block">
+        <div class="book-cover-wrap">
+          <img src="Gifts of the Seasons, Spring and Summer.jpg" alt="Book cover of Gifts of the Seasons, Spring and Summer by Suzanne Cottrell" loading="lazy">
+        </div>
+        <div class="book-copy">
+          <span class="card-tag">Poetry Collection</span>
+          <h2>Gifts of the Seasons, Spring and Summer</h2>
+          <ul class="book-meta">
+            <li><span>Publisher:</span> Kelsay Books</li>
+            <li><span>Published:</span> January 13, 2021</li>
+            <li><span>Format:</span> Paperback</li>
+            <li><span>Length:</span> 58 pages</li>
+            <li><span>ISBN-10:</span> 1952326893</li>
+            <li><span>ISBN-13:</span> 978-1952326899</li>
+          </ul>
+          <p class="book-description">Suzanne Cottrell is a student of and lover of nature, as evident in "Solitary Walk," where she says, "Wonderment of woods embraces my being, releases me from worldly demands." She spends much time observing flowers, trees, birds, and whatever else is in her path, be it on the beach or a walk in the woods in search of edible mushrooms, with "a burlap bag draped over my shoulder, relentless foraging for a spongy, tree-like fungus." Her poet's eye for detail provides us with vivid descriptions of her world as in "Sea Sparkle," "Algae, glittering malachite and lapis, tiny sequins on an elegant, satin, ocean gown." She can be concise when appropriate, including several verses of haiku. The reader will enjoy these lovely poems in this collection of vignettes of verdant landscapes Suzanne has witnessed in the wide world of nature and recorded for us.</p>
+          <div class="praise-block">
+            <p>"Just as a painter renders a lovely image with a brush, Suzanne Cottrell paints nature images with words. A meteor streaks across the sky, illuminating a mountain lake. A trout rises to a deer hair fly cast on a pool at the South Toe River. On a Caribbean beach, 'Sips of blue, raspberry slushy, chill my mouth, a sapphire ice cave, so cold it burns my throat like blue lava flow that colors my tongue.' The images delight both ear and eye and the reader will want to turn to these poems again and again."</p>
+            <footer>Wes Sims, author of <em>When Night Comes</em> and <em>Taste of Change</em></footer>
+          </div>
+          <p><a class="btn btn-primary" href="https://www.amazon.com/Seasons-Spring-Summer-Suzanne-Cottrell/dp/1952326893" target="_blank" rel="noopener noreferrer">View on Amazon</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book 4: Gifts of the Seasons, Autumn and Winter (May 25, 2020, corrected date) -->
+  <section class="books-section section">
+    <div class="section-inner">
+      <div class="book-block reverse">
+        <div class="book-cover-wrap">
+          <img src="Gifts of the Seasons, Autumn and Winter.jpg" alt="Book cover of Gifts of the Seasons, Autumn and Winter by Suzanne Cottrell" loading="lazy">
+        </div>
+        <div class="book-copy">
+          <span class="card-tag">Poetry Collection</span>
+          <h2>Gifts of the Seasons, Autumn and Winter</h2>
+          <ul class="book-meta">
+            <li><span>Publisher:</span> Kelsay Books</li>
+            <li><span>Published:</span> May 25, 2020</li>
+            <li><span>Format:</span> Kindle Edition and Paperback</li>
+            <li><span>Length:</span> 44 pages</li>
+            <li><span>ASIN:</span> B0BVNMR6M7</li>
+          </ul>
+          <p class="book-description">The Etruscans named the season, autumn, and the Romans adopted the sound, a tribal habit. Harvest was a better title for centuries until the old returned to common use. Jack Frost bridges the gap into winter. Suzanne Cottrell takes us on a quiet walk through the lesser favored half of the year. The reader will find pumpkins, geese, and hickory root here, along with the icy moon, and the great horned owl. In our 21st century comfort, the images may seem simple and even quaint. But if we free ourselves from our devices and get out into the weather, there are some deep snows to be found and long nights. Suzanne Cottrell reminds us that the seasons once held startling beauty and profound mystery, and still do.</p>
+          <div class="praise-block">
+            <footer>Russell Streur, Editor, <em>Plum Tree Tavern</em></footer>
+          </div>
+          <p><a class="btn btn-primary" href="https://www.amazon.com/Seasons-Autumn-Winter-Suzanne-Cottrell-ebook/dp/B0BVNMR6M7" target="_blank" rel="noopener noreferrer">View on Amazon</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Also available beyond Amazon -->
+  <section class="discovery-section section">
+    <div class="section-inner">
+      <span class="section-label" style="color:#8fd1cd;">Find Her Books Elsewhere</span>
+      <h2 class="reveal">Also available beyond Amazon</h2>
+      <p class="reveal">Several of Suzanne's books are published by Kelsay Books and can also be found directly at kelsaybooks.com, alongside their Amazon listings.</p>
+      <div class="discovery-links">
+        <a class="btn btn-primary reveal" href="https://www.kelsaybooks.com" target="_blank" rel="noopener noreferrer">Visit Kelsay Books</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Also in progress -->
+  <section class="progress-section section">
+    <div class="section-inner">
+      <span class="progress-eyebrow reveal">Also in Progress</span>
+      <h2 class="section-heading reveal">Suspended Silence</h2>
+      <div class="progress-grid">
+        <figure class="reveal" style="margin:0;">
+          <!--
+            Replace the src below with the real filename once the lake photograph
+            (trees framing a calm lake under blue sky) is saved to assets/.
+          -->
+          <img src="LAKE VIEW.png" alt="A calm lake framed by trees under a blue sky, photographed by Suzanne Cottrell" loading="lazy">
+        </figure>
+        <div class="reveal">
+          <p>Suspended Silence is Suzanne Cottrell's fifth poetry collection, forthcoming from Kelsay Books in 2027. The manuscript is currently being proofed, and Suzanne is gathering endorsements for the collection.</p>
+          <p>The collection explores:</p>
+          <ul class="progress-themes">
+            <li>Nature as beauty</li>
+            <li>Nature triggers memories</li>
+            <li>A call to protect the natural world</li>
+          </ul>
+          <p><a class="btn btn-primary" href="current-project.html">Explore the Current Project</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications CTA -->
+  <section class="publications-cta section">
+    <div class="section-inner">
+      <span class="section-label" style="color:#9fd6cf;">Beyond the Books</span>
+      <h2 class="reveal">A wider body of published writing</h2>
+      <p class="reveal">Alongside her books, Suzanne's poems, stories, and personal narratives have appeared in more than eighty journals and anthologies.</p>
+      <a class="btn btn-primary reveal" href="publications.html">Explore Suzanne's Published Writing</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>Suzanne Cottrell</h3>
+      <p>Author and writer working across poetry, fiction, personal narratives, and nature writing.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Site</h3>
+      <ul>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="current-project.html">Current Project</a></li>
+        <li><a href="honors.html">Honors</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Connect with Suzanne</h3>
+      <ul class="connect-list">
+        <li>
+          <a href="https://www.linkedin.com/in/suzanne-cottrell-34158b6a/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.2 9.4h3.56V21H3.2zM9.5 9.4h3.41v1.59h.05c.47-.86 1.62-1.77 3.33-1.77 3.56 0 4.22 2.26 4.22 5.2V21h-3.56v-5.9c0-1.4-.02-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9.5z"/></svg>
+            <span>Connect with Suzanne on LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.amazon.com/author/suzannesuzyberrycottrell" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h2.2l1.1 5.1L10.6 7h1.9l1.3 5.1L15 7h2.1l-2.3 9h-2l-1.3-5-1.3 5h-2L6 7zm.3 12.3c3.3 2 8.1 2.1 11.6.2.3-.2.6.1.3.4-1.9 1.7-5.4 2.9-8.6 2.9-3.1 0-5.7-1-7.3-2.6-.2-.2 0-.5.3-.3.6.4 1.1.9 1.7 1.4z"/></svg>
+            <span>Find Suzanne's books on Amazon</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://suzannecottrell1.substack.com" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v2.6H4V4zm0 4.6h16V11H4V8.6zM4 13h16v7l-8-4.2L4 20v-7z"/></svg>
+            <span>Read Suzanne's Substack</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Suzanne Cottrell. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('primaryNav');
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if ('IntersectionObserver' in window && !prefersReducedMotion) {
+      var revealElements = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealElements.forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.classList.add('in-view');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
