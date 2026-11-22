@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources | Suzanne Cottrell</title>
+<meta name="description" content="A curated collection of links to Suzanne Cottrell's published writing, audio recordings, books, Substack, and author platforms.">
+<script>
+  document.documentElement.classList.add('js-enabled');
+</script>
+<style>
+  :root {
+    --forest: #243d2d;
+    --forest-dark: #1a2e21;
+    --teal: #1b4d4a;
+    --emerald: #1e6f52;
+    --turquoise: #2e8c8a;
+    --deep-blue: #1f3a52;
+    --clay: #8c7355;
+    --bark: #5b4636;
+    --paper: #f6f2e9;
+    --card: #fffdf8;
+    --ink: #1e2420;
+    --ink-soft: #3c4740;
+    --border-soft: #d8d0bf;
+    --focus-ring: #2e8c8a;
+    --max-width: 1180px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", serif;
+    color: var(--forest-dark);
+    line-height: 1.25;
+    margin: 0 0 0.6em 0;
+  }
+
+  p {
+    margin: 0 0 1em 0;
+    color: var(--ink-soft);
+  }
+
+  a {
+    color: var(--teal);
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--emerald);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 0;
+    top: -4rem;
+    background: var(--forest);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    z-index: 1000;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Header and Navigation */
+  header.site-header {
+    background-color: var(--forest);
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .nav-wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .site-logo {
+    font-family: Georgia, "Iowan Old Style", serif;
+    color: #f6f2e9;
+    font-size: 1.3rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .site-logo:hover,
+  .site-logo:focus {
+    color: #a8ded8;
+  }
+
+  .site-logo span {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #b7c9bb;
+    margin-top: 0.15rem;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid #f6f2e9;
+    color: #f6f2e9;
+    font-size: 0.95rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  nav.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.main-nav a {
+    color: #e9e4d6;
+    text-decoration: none;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    padding: 0.4rem 0.2rem;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+  }
+
+  nav.main-nav a:hover,
+  nav.main-nav a:focus {
+    color: #ffffff;
+    border-bottom-color: var(--turquoise);
+  }
+
+  nav.main-nav a.current {
+    color: #ffffff;
+    border-bottom-color: var(--turquoise);
+  }
+
+  @media (max-width: 860px) {
+    .menu-toggle {
+      display: inline-block;
+    }
+    nav.main-nav {
+      display: none;
+      width: 100%;
+    }
+    nav.main-nav.is-open {
+      display: block;
+    }
+    nav.main-nav ul {
+      flex-direction: column;
+      gap: 0;
+      padding-bottom: 1rem;
+    }
+    nav.main-nav a {
+      display: block;
+      padding: 0.65rem 0.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav-wrap {
+      flex-wrap: wrap;
+    }
+  }
+
+  /* Layout helpers */
+  .section {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    color: var(--turquoise);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+    max-width: 42rem;
+  }
+
+  .section-intro {
+    max-width: 48rem;
+    font-size: 1.05rem;
+  }
+
+  .js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .js-enabled .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js-enabled .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: var(--turquoise);
+    color: #0c201e;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #3ea19e;
+    color: #0c201e;
+  }
+
+  /* Hero */
+  .resources-hero {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--teal) 100%);
+    color: #f6f2e9;
+    padding: 4rem 1.5rem 4.5rem;
+  }
+
+  .resources-hero .section-inner {
+    max-width: 50rem;
+  }
+
+  .resources-hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.78rem;
+    color: #9fd6cf;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+
+  .resources-hero h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .resources-hero p {
+    color: #e3ded0;
+    font-size: 1.08rem;
+  }
+
+  /* Resource category sections */
+  .resource-section {
+    background-color: var(--paper);
+  }
+
+  .resource-section:nth-of-type(even) {
+    background-color: #efe8d6;
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.6rem;
+    margin-top: 2.2rem;
+  }
+
+  .resource-card {
+    background-color: var(--card);
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    padding: 1.5rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .resource-card h3 {
+    font-size: 1.08rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .resource-card p {
+    font-size: 0.93rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .resource-card a.resource-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+  }
+
+  .resource-note {
+    font-size: 0.82rem;
+    color: var(--bark);
+    font-style: italic;
+  }
+
+  /* Platform grid, icon style */
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.2rem;
+    margin-top: 2.2rem;
+  }
+
+  .platform-card {
+    background-color: var(--card);
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .platform-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--forest);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .platform-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #f6f2e9;
+  }
+
+  .platform-card h3 {
+    font-size: 0.98rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .platform-card a {
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* Pathways */
+  .pathways-section {
+    background-color: var(--deep-blue);
+    color: #e9eef1;
+  }
+
+  .pathways-section h2 {
+    color: #ffffff;
+  }
+
+  .pathways-section .section-intro {
+    color: #cfd8da;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2.3rem;
+  }
+
+  .card {
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .card-tag {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: #8fd1cd;
+    font-weight: 700;
+  }
+
+  .card h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .card p {
+    color: #cfd8da;
+    font-size: 0.93rem;
+    margin-bottom: 0;
+  }
+
+  .card-link {
+    margin-top: auto;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #a8ded8;
+  }
+
+  /* Footer */
+  footer.site-footer {
+    background-color: var(--forest-dark);
+    color: #cfd8d2;
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
+    gap: 2rem;
+  }
+
+  .footer-inner h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-inner p {
+    color: #aab8ae;
+    font-size: 0.9rem;
+  }
+
+  footer.site-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer.site-footer ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  footer.site-footer a {
+    color: #cfd8d2;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  footer.site-footer a:hover,
+  footer.site-footer a:focus {
+    color: #a8ded8;
+  }
+
+  .connect-list li a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .connect-list svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    fill: #cfd8d2;
+  }
+
+  .connect-list a:hover svg,
+  .connect-list a:focus svg {
+    fill: #a8ded8;
+  }
+
+  .footer-bottom {
+    max-width: var(--max-width);
+    margin: 2.5rem auto 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.82rem;
+    color: #8fa093;
+  }
+
+  @media (max-width: 900px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="site-logo">Suzanne Cottrell<span>Poet &amp; Writer</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">
+      Menu
+    </button>
+    <nav class="main-nav" id="primaryNav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="honors.html">Honors</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="current-project.html">Current Project</a></li>
+        <li><a href="resources.html" class="current" aria-current="page">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- Hero -->
+  <section class="resources-hero">
+    <div class="section-inner">
+      <span class="eyebrow">Resources</span>
+      <h1>Resources</h1>
+      <p>A gathered collection of links to Suzanne Cottrell's published writing, audio recordings, books, and author platforms, organized in one place for easy reference.</p>
+    </div>
+  </section>
+
+  <!-- Read her work -->
+  <section class="resource-section section">
+    <div class="section-inner">
+      <span class="section-label">Read Suzanne's Work</span>
+      <h2 class="section-heading reveal">Journals and publications with direct links</h2>
+      <p class="section-intro reveal">Several of Suzanne's publishers offer direct access to her published pieces online. The links below lead to search results, issue pages, or archives where her work can be found.</p>
+      <div class="resource-grid">
+        <div class="resource-card reveal">
+          <h3>Haiku Journal, Issue 69</h3>
+          <p>Home of "white dogwood petals," published May 8, 2026.</p>
+          <a class="resource-link" href="https://haikujournal.org/issue.php?id=69&issue=69" target="_blank" rel="noopener noreferrer">Read in Haiku Journal</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Remington Review</h3>
+          <p>Home of "Prismatic Palette," published in the 2025 Spring issue.</p>
+          <a class="resource-link" href="https://heyzine.com/flip-book/002448715c.html#page/12" target="_blank" rel="noopener noreferrer">Read in the Remington Review</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>The Nature of Our Times</h3>
+          <p>A search result page gathering Suzanne's contributions, including "Suspended Beauty."</p>
+          <a class="resource-link" href="https://natureofourtimes.poetsforscience.org/?s=Suzanne+Cottrell" target="_blank" rel="noopener noreferrer">Find Suzanne's work in The Nature of Our Times</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>The Orchards Poetry Journal</h3>
+          <p>Browse previous issues, including the 2023 Winter issue featuring "Elusive Delight."</p>
+          <a class="resource-link" href="https://orchardspoetry.com/previous-issues/" target="_blank" rel="noopener noreferrer">Browse Orchards Poetry Journal issues</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Pangolin Review</h3>
+          <p>A PDF archive of a past issue featuring Suzanne's work.</p>
+          <a class="resource-link" href="https://b717482d-1176-4764-b522-74b272050080.filesusr.com/ugd/ac271c_afd7e087d0b94400ab9015d7cff60de7.pdf" target="_blank" rel="noopener noreferrer">Read in Pangolin Review</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Burningword Literary Journal</h3>
+          <p>Home of "Aged," published in January 2018.</p>
+          <a class="resource-link" href="https://www.burningword.com/2018/01/aged" target="_blank" rel="noopener noreferrer">Read "Aged" in Burningword</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>The Skinny Poetry Journal</h3>
+          <p>An archive page from February 2017 featuring Suzanne's work.</p>
+          <a class="resource-link" href="https://theskinnypoetryjournal.wordpress.com/2017/02/" target="_blank" rel="noopener noreferrer">Read in The Skinny Poetry Journal</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>100 Word Fiction</h3>
+          <p>A search result page gathering Suzanne's flash fiction, including "Missed Opportunity."</p>
+          <a class="resource-link" href="https://100wordfiction.com/stories.php?q=Suzanne+Cottrell&sort=latest&year=&tag=" target="_blank" rel="noopener noreferrer">Find Suzanne's work on 100 Word Fiction</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Nailpolish Stories</h3>
+          <p>A search result page gathering Suzanne's hint fiction, including her first published piece, "Sole Mate."</p>
+          <a class="resource-link" href="https://nailpolishstories.wordpress.com/?s=Suzanne+Cottrell" target="_blank" rel="noopener noreferrer">Find Suzanne's work on Nailpolish Stories</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>The Dead Mule School of Southern Literature</h3>
+          <p>A search result page gathering Suzanne's contributions.</p>
+          <a class="resource-link" href="https://deadmule.com/?s=Suzanne+Cottrell" target="_blank" rel="noopener noreferrer">Find Suzanne's work on The Dead Mule School</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Parks and Points, Rocky Mountains</h3>
+          <p>A nature writing feature from Parks and Points.</p>
+          <a class="resource-link" href="https://www.parksandpoints.com/rocky-mountains" target="_blank" rel="noopener noreferrer">Read on Parks and Points</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exhibitions and collaborations -->
+  <section class="resource-section section">
+    <div class="section-inner">
+      <span class="section-label">Exhibitions and Collaborations</span>
+      <h2 class="section-heading reveal">Art, exhibition, and collaborative links</h2>
+      <div class="resource-grid">
+        <div class="resource-card reveal">
+          <h3>Northwind Virtual Tour</h3>
+          <p>A virtual tour of the Lost in Words exhibit, which featured Suzanne's "Solitary Hunters," written in response to Jenny McKinnon Wright's painting "Hunting."</p>
+          <a class="resource-link" href="https://www.youtube.com/watch?v=68V6V65d8_E" target="_blank" rel="noopener noreferrer">Watch the Northwind virtual tour</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Women Speak Book Page</h3>
+          <p>The book page for Women Speak, Portraits, Poetry and Prose of the Feminine Experience, which includes Suzanne's "Altered Silhouette."</p>
+          <a class="resource-link" href="https://nsfr-store.square.site/product/book-women-speak-portraits-poetry-and-prose/66" target="_blank" rel="noopener noreferrer">View the Women Speak book page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audio and media -->
+  <section class="resource-section section">
+    <div class="section-inner">
+      <span class="section-label">Audio and Media</span>
+      <h2 class="section-heading reveal">Listen and watch</h2>
+      <p class="section-intro reveal">A full archive of recorded readings and a video interview is available on the Media page.</p>
+      <div class="resource-grid">
+        <div class="resource-card reveal">
+          <h3>6 Minute Stories</h3>
+          <p>Suzanne's recorded readings, including the most recent, "Preserving Freedom."</p>
+          <a class="resource-link" href="media.html">Visit the Media page</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Suzanne Cottrell Interview</h3>
+          <p>A video interview with Suzanne Cottrell.</p>
+          <a class="resource-link" href="https://www.youtube.com/watch?v=cVFo8PN6j6E" target="_blank" rel="noopener noreferrer">Watch Suzanne's interview on YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books -->
+  <section class="resource-section section">
+    <div class="section-inner">
+      <span class="section-label">Books</span>
+      <h2 class="section-heading reveal">Find Suzanne's published books</h2>
+      <div class="resource-grid">
+        <div class="resource-card reveal">
+          <h3>Amazon</h3>
+          <p>View Suzanne's full Amazon author page and all four published books.</p>
+          <a class="resource-link" href="https://www.amazon.com/author/suzannesuzyberrycottrell" target="_blank" rel="noopener noreferrer">Find Suzanne's books on Amazon</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Bookshop.org</h3>
+          <p>All four books are listed here and on the NCPS shelf.</p>
+          <a class="resource-link" href="https://bookshop.org" target="_blank" rel="noopener noreferrer">Find Suzanne's books on Bookshop.org</a>
+          <span class="resource-note">Search "Suzanne Cottrell" to find her titles.</span>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Goodreads</h3>
+          <p>Explore Suzanne's author profile and book listings.</p>
+          <a class="resource-link" href="https://www.goodreads.com/author/show/Suzanne_Cottrell" target="_blank" rel="noopener noreferrer">Explore Suzanne's books on Goodreads</a>
+        </div>
+        <div class="resource-card reveal">
+          <h3>Books Page</h3>
+          <p>Read detailed descriptions and selected praise for each title directly on this website.</p>
+          <a class="resource-link" href="books.html">Visit the Books page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Substack and platforms -->
+  <section class="resource-section section">
+    <div class="section-inner">
+      <span class="section-label">Substack and Author Platforms</span>
+      <h2 class="section-heading reveal">Follow and connect</h2>
+      <div class="platform-grid">
+        <div class="platform-card reveal">
+          <div class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16v2.6H4V4zm0 4.6h16V11H4V8.6zM4 13h16v7l-8-4.2L4 20v-7z"/></svg>
+          </div>
+          <div>
+            <h3>Substack</h3>
+            <a href="https://suzannecottrell1.substack.com" target="_blank" rel="noopener noreferrer">Read Suzanne's Substack</a>
+          </div>
+        </div>
+        <div class="platform-card reveal">
+          <div class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4.56.2 1 .46 1.44.9.44.44.7.88.9 1.44.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43-.2.56-.46 1-.9 1.44-.44.44-.88.7-1.44.9-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a3.9 3.9 0 0 1-1.44-.9 3.9 3.9 0 0 1-.9-1.44c-.16-.46-.35-1.26-.4-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43.2-.56.46-1 .9-1.44.44-.44.88-.7 1.44-.9.46-.16 1.26-.35 2.43-.4C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5.01-4.74.07-.96.04-1.48.2-1.83.33-.46.18-.78.39-1.12.73-.34.34-.55.66-.73 1.12-.13.35-.29.87-.33 1.83C3.19 8.5 3.18 8.86 3.18 12s.01 3.5.07 4.74c.04.96.2 1.48.33 1.83.18.46.39.78.73 1.12.34.34.66.55 1.12.73.35.13.87.29 1.83.33 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.2 1.83-.33.46-.18.78-.39 1.12-.73.34-.34.55-.66.73-1.12.13-.35.29-.87.33-1.83.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.2-1.48-.33-1.83a2.9 2.9 0 0 0-.73-1.12 2.9 2.9 0 0 0-1.12-.73c-.35-.13-.87-.29-1.83-.33C15.5 4.01 15.14 4 12 4zm0 3.6a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8zm0 1.8a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2zm4.6-2a1.03 1.03 0 1 1 0 2.06 1.03 1.03 0 0 1 0-2.06z"/></svg>
+          </div>
+          <div>
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/slbc.ottrell" target="_blank" rel="noopener noreferrer">Follow Suzanne on Instagram</a>
+          </div>
+        </div>
+        <div class="platform-card reveal">
+          <div class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.2 9.4h3.56V21H3.2zM9.5 9.4h3.41v1.59h.05c.47-.86 1.62-1.77 3.33-1.77 3.56 0 4.22 2.26 4.22 5.2V21h-3.56v-5.9c0-1.4-.02-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9.5z"/></svg>
+          </div>
+          <div>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/suzanne-cottrell-34158b6a/" target="_blank" rel="noopener noreferrer">Connect with Suzanne on LinkedIn</a>
+          </div>
+        </div>
+        <div class="platform-card reveal">
+          <div class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 3h12.5A1.5 1.5 0 0 1 19 4.5v16l-7-3-7 3v-16A1.5 1.5 0 0 1 6.5 3H5zm2 2v13.1l5-2.14 5 2.14V5H7z"/></svg>
+          </div>
+          <div>
+            <h3>Goodreads</h3>
+            <a href="https://www.goodreads.com/author/show/Suzanne_Cottrell" target="_blank" rel="noopener noreferrer">Explore Suzanne's books on Goodreads</a>
+          </div>
+        </div>
+        <div class="platform-card reveal">
+          <div class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 7h2.2l1.1 5.1L10.6 7h1.9l1.3 5.1L15 7h2.1l-2.3 9h-2l-1.3-5-1.3 5h-2L6 7zm.3 12.3c3.3 2 8.1 2.1 11.6.2.3-.2.6.1.3.4-1.9 1.7-5.4 2.9-8.6 2.9-3.1 0-5.7-1-7.3-2.6-.2-.2 0-.5.3-.3.6.4 1.1.9 1.7 1.4z"/></svg>
+          </div>
+          <div>
+            <h3>Amazon Author Page</h3>
+            <a href="https://www.amazon.com/author/suzannesuzyberrycottrell" target="_blank" rel="noopener noreferrer">Find Suzanne's books on Amazon</a>
+          </div>
+        </div>
+        <div class="platform-card reveal">
+          <div class="platform-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21.6 7.2s-.21-1.5-.86-2.16c-.82-.86-1.74-.86-2.16-.91C15.6 4 12 4 12 4h-.01s-3.59 0-6.57.13c-.42.05-1.34.05-2.16.91-.65.66-.86 2.16-.86 2.16S2.2 8.95 2.2 10.7v1.6c0 1.75.2 3.5.2 3.5s.21 1.5.86 2.16c.82.86 1.9.83 2.38.92 1.72.17 7.36.22 7.36.22s3.6-.01 6.58-.14c.42-.05 1.34-.05 2.16-.91.65-.66.86-2.16.86-2.16s.2-1.75.2-3.5v-1.6c0-1.75-.2-3.5-.2-3.5zM9.9 14.6V9.1l5.4 2.76z"/></svg>
+          </div>
+          <div>
+            <h3>YouTube</h3>
+            <a href="https://www.youtube.com/watch?v=cVFo8PN6j6E" target="_blank" rel="noopener noreferrer">Watch Suzanne's interview on YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pathways -->
+  <section class="pathways-section section">
+    <div class="section-inner">
+      <span class="section-label" style="color:#8fd1cd;">Continue Exploring</span>
+      <h2 class="section-heading reveal">Where to go from here</h2>
+      <div class="card-grid">
+        <article class="card reveal">
+          <span class="card-tag">Discover</span>
+          <h3>Writing by Category</h3>
+          <p>Browse selected poems and stories organized by form.</p>
+          <a class="card-link" href="writing.html">Visit the Writing page</a>
+        </article>
+        <article class="card reveal">
+          <span class="card-tag">Archive</span>
+          <h3>Full Publication History</h3>
+          <p>Browse all 81 journals and anthologies that have published Suzanne's work.</p>
+          <a class="card-link" href="publications.html">Visit Publications</a>
+        </article>
+        <article class="card reveal">
+          <span class="card-tag">Connect</span>
+          <h3>Contact Suzanne</h3>
+          <p>Send a message with a question or comment.</p>
+          <a class="card-link" href="contact.html">Visit Contact</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>Suzanne Cottrell</h3>
+      <p>Author and writer working across poetry, fiction, nonfiction, and nature writing.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="honors.html">Honors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Site</h3>
+      <ul>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="current-project.html">Current Project</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Connect with Suzanne</h3>
+      <ul class="connect-list">
+        <li>
+          <a href="https://www.instagram.com/slbc.ottrell" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4.56.2 1 .46 1.44.9.44.44.7.88.9 1.44.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43-.2.56-.46 1-.9 1.44-.44.44-.88.7-1.44.9-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a3.9 3.9 0 0 1-1.44-.9 3.9 3.9 0 0 1-.9-1.44c-.16-.46-.35-1.26-.4-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43.2-.56.46-1 .9-1.44.44-.44.88-.7 1.44-.9.46-.16 1.26-.35 2.43-.4C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5.01-4.74.07-.96.04-1.48.2-1.83.33-.46.18-.78.39-1.12.73-.34.34-.55.66-.73 1.12-.13.35-.29.87-.33 1.83C3.19 8.5 3.18 8.86 3.18 12s.01 3.5.07 4.74c.04.96.2 1.48.33 1.83.18.46.39.78.73 1.12.34.34.66.55 1.12.73.35.13.87.29 1.83.33 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.2 1.83-.33.46-.18.78-.39 1.12-.73.34-.34.55-.66.73-1.12.13-.35.29-.87.33-1.83.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.2-1.48-.33-1.83a2.9 2.9 0 0 0-.73-1.12 2.9 2.9 0 0 0-1.12-.73c-.35-.13-.87-.29-1.83-.33C15.5 4.01 15.14 4 12 4zm0 3.6a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8zm0 1.8a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2zm4.6-2a1.03 1.03 0 1 1 0 2.06 1.03 1.03 0 0 1 0-2.06z"/></svg>
+            <span>Follow Suzanne on Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/suzanne-cottrell-34158b6a/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.2 9.4h3.56V21H3.2zM9.5 9.4h3.41v1.59h.05c.47-.86 1.62-1.77 3.33-1.77 3.56 0 4.22 2.26 4.22 5.2V21h-3.56v-5.9c0-1.4-.02-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9.5z"/></svg>
+            <span>Connect with Suzanne on LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.goodreads.com/author/show/Suzanne_Cottrell" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h12.5A1.5 1.5 0 0 1 19 4.5v16l-7-3-7 3v-16A1.5 1.5 0 0 1 6.5 3H5zm2 2v13.1l5-2.14 5 2.14V5H7z"/></svg>
+            <span>Explore Suzanne's books on Goodreads</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.amazon.com/author/suzannesuzyberrycottrell" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h2.2l1.1 5.1L10.6 7h1.9l1.3 5.1L15 7h2.1l-2.3 9h-2l-1.3-5-1.3 5h-2L6 7zm.3 12.3c3.3 2 8.1 2.1 11.6.2.3-.2.6.1.3.4-1.9 1.7-5.4 2.9-8.6 2.9-3.1 0-5.7-1-7.3-2.6-.2-.2 0-.5.3-.3.6.4 1.1.9 1.7 1.4z"/></svg>
+            <span>Find Suzanne's books on Amazon</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://suzannecottrell1.substack.com" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v2.6H4V4zm0 4.6h16V11H4V8.6zM4 13h16v7l-8-4.2L4 20v-7z"/></svg>
+            <span>Read Suzanne's Substack</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=cVFo8PN6j6E" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2s-.21-1.5-.86-2.16c-.82-.86-1.74-.86-2.16-.91C15.6 4 12 4 12 4h-.01s-3.59 0-6.57.13c-.42.05-1.34.05-2.16.91-.65.66-.86 2.16-.86 2.16S2.2 8.95 2.2 10.7v1.6c0 1.75.2 3.5.2 3.5s.21 1.5.86 2.16c.82.86 1.9.83 2.38.92 1.72.17 7.36.22 7.36.22s3.6-.01 6.58-.14c.42-.05 1.34-.05 2.16-.91.65-.66.86-2.16.86-2.16s.2-1.75.2-3.5v-1.6c0-1.75-.2-3.5-.2-3.5zM9.9 14.6V9.1l5.4 2.76z"/></svg>
+            <span>Watch Suzanne's interview on YouTube</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://bookshop.org" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7l1-3h14l1 3v2H4V7zm0 3h16v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9zm5 2v5h2v-5H9zm4 0v5h2v-5h-2z"/></svg>
+            <span>Find Suzanne's books on Bookshop.org</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Suzanne Cottrell. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('primaryNav');
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if ('IntersectionObserver' in window && !prefersReducedMotion) {
+      var revealElements = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealElements.forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.classList.add('in-view');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

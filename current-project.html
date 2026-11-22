@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Current Project | Suzanne Cottrell</title>
+<meta name="description" content="Suspended Silence is Suzanne Cottrell's fifth poetry collection, forthcoming from Kelsay Books, exploring nature as beauty, nature triggering memories, and a call to protect the natural world.">
+
+<script>
+  document.documentElement.classList.add('js-enabled');
+</script>
+
+<style>
+  :root {
+    --forest: #243d2d;
+    --forest-dark: #1b2e22;
+    --teal: #1b4d4a;
+    --emerald: #1e6f52;
+    --turquoise: #2e8c8a;
+    --deep-blue: #1f3a52;
+    --clay: #8c7355;
+    --bark: #5b4636;
+    --paper: #e8e1cf;
+    --card: #ffffff;
+    --ink: #1e2420;
+    --ink-soft: #3c4740;
+    --border-soft: #d8d0bf;
+    --focus-ring: #2e8c8a;
+    --max-width: 1220px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", serif;
+    color: var(--forest-dark);
+    line-height: 1.25;
+    margin: 0 0 0.6em 0;
+  }
+
+  p {
+    margin: 0 0 1em 0;
+    color: var(--ink-soft);
+  }
+
+  a {
+    color: var(--teal);
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--emerald);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 0;
+    top: -4rem;
+    background: var(--forest);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    z-index: 1000;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Header & Flat Navigation Bar */
+  header.site-header {
+    background-color: var(--forest-dark);
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  }
+
+  .nav-wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  /* Logo block matching screenshot */
+  .site-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-name {
+    font-family: Georgia, "Iowan Old Style", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+  }
+
+  .logo-sub {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #8fd1cd;
+    margin-top: 0.25rem;
+  }
+
+  .turtle-icon {
+    width: 32px;
+    height: 32px;
+    stroke: #8fd1cd;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  .site-logo:hover .logo-name,
+  .site-logo:focus .logo-name {
+    color: #a8ded8;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid #f6f2e9;
+    color: #f6f2e9;
+    font-size: 0.95rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Flat Single-Lane Navigation */
+  nav.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.main-nav a {
+    color: #e9e4d6;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.5rem 0.1rem;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  nav.main-nav a:hover,
+  nav.main-nav a:focus {
+    color: #ffffff;
+  }
+
+  /* Active Indicator Underline matching screenshot */
+  nav.main-nav a.current {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  nav.main-nav a.current::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--turquoise);
+    border-radius: 2px;
+  }
+
+  @media (max-width: 1080px) {
+    nav.main-nav ul {
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .menu-toggle {
+      display: inline-block;
+    }
+    nav.main-nav {
+      display: none;
+      width: 100%;
+      margin-top: 0.8rem;
+    }
+    nav.main-nav.is-open {
+      display: block;
+    }
+    nav.main-nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+    }
+    nav.main-nav a {
+      display: block;
+      width: 100%;
+      padding: 0.6rem 0.4rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    nav.main-nav a.current::after {
+      display: none;
+    }
+    nav.main-nav a.current {
+      background-color: rgba(46, 140, 138, 0.25);
+      border-left: 3px solid var(--turquoise);
+      padding-left: 0.6rem;
+    }
+    .nav-wrap {
+      flex-wrap: wrap;
+    }
+  }
+
+  /* Layout helpers */
+  .section {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.82rem;
+    color: var(--turquoise);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .section-heading {
+    font-size: 2.1rem;
+    max-width: 44rem;
+  }
+
+  .section-intro {
+    max-width: 48rem;
+    font-size: 1.15rem;
+  }
+
+  .js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .js-enabled .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js-enabled .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: var(--turquoise);
+    color: #0c201e;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #3ea19e;
+    color: #0c201e;
+  }
+
+  /* Hero Section */
+  .project-hero {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--teal) 100%);
+    color: #f6f2e9;
+    padding: 4.5rem 1.5rem 5rem;
+  }
+
+  .project-hero .section-inner {
+    max-width: 52rem;
+  }
+
+  .project-hero .eyebrow {
+    display: inline-block;
+    background-color: var(--emerald);
+    color: #f2faf6;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-hero h1 {
+    color: #ffffff;
+    font-size: 2.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-hero .project-status-line {
+    color: #bfe3dc;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-hero p.status-copy {
+    color: #e3ded0;
+    font-size: 1.15rem;
+    max-width: 44rem;
+  }
+
+  /* Lake Feature Image */
+  .lake-feature-section {
+    background-color: #dfd7c4;
+    text-align: center;
+  }
+
+  .lake-feature-section figure {
+    margin: 0;
+  }
+
+  .lake-feature-section img {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 10px 24px rgba(36,61,45,0.18);
+  }
+
+  .lake-feature-section figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--bark);
+    font-style: italic;
+  }
+
+  /* Status Facts Grid */
+  .facts-section {
+    background-color: var(--paper);
+  }
+
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.6rem;
+    margin-top: 2rem;
+  }
+
+  .fact-card {
+    background-color: var(--card);
+    border: 1px solid var(--border-soft);
+    border-left: 4px solid var(--turquoise);
+    border-radius: 6px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  .fact-card .fact-label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--emerald);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .fact-card p {
+    font-size: 1.05rem;
+    margin-bottom: 0;
+    color: var(--ink);
+  }
+
+  /* Themes Section */
+  .theme-section {
+    background-color: #dfd7c4;
+  }
+
+  .theme-block {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 2.6rem 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .theme-block:last-child {
+    border-bottom: none;
+  }
+
+  .theme-block.reverse {
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .theme-block.reverse .theme-image {
+    order: 2;
+  }
+
+  .theme-block.reverse .theme-copy {
+    order: 1;
+  }
+
+  @media (max-width: 820px) {
+    .theme-block,
+    .theme-block.reverse {
+      grid-template-columns: 1fr;
+    }
+    .theme-block.reverse .theme-image,
+    .theme-block.reverse .theme-copy {
+      order: initial;
+    }
+    .theme-image {
+      order: -1;
+    }
+  }
+
+  .theme-image img {
+    border-radius: 6px;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    box-shadow: 0 10px 24px rgba(36,61,45,0.18);
+  }
+
+  figcaption {
+    font-size: 0.88rem;
+    color: var(--bark);
+    margin-top: 0.5rem;
+  }
+
+  .theme-copy .theme-kicker {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--emerald);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-copy h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-copy p {
+    font-size: 1.1rem;
+  }
+
+  /* Notes Section */
+  .notes-section {
+    background-color: var(--paper);
+  }
+
+  .notes-box {
+    background-color: var(--card);
+    border: 1px dashed var(--clay);
+    border-radius: 6px;
+    padding: 2rem;
+    max-width: 46rem;
+    margin-top: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  .notes-box p {
+    font-size: 1.05rem;
+    margin-bottom: 1em;
+  }
+
+  .notes-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Substack CTA */
+  .substack-section {
+    background-color: var(--emerald);
+    color: #f2faf6;
+    text-align: center;
+  }
+
+  .substack-section h2 {
+    color: #ffffff;
+  }
+
+  .substack-section p {
+    color: #e2f3ec;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.15rem;
+  }
+
+  /* Pathways Grid */
+  .pathways-section {
+    background-color: var(--deep-blue);
+    color: #e9eef1;
+  }
+
+  .pathways-section h2 {
+    color: #ffffff;
+  }
+
+  .pathways-section .section-intro {
+    color: #cfd8da;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2.3rem;
+  }
+
+  .card {
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 6px;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .card-tag {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #8fd1cd;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  .card h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .card p {
+    color: #cfd8da;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .card-link {
+    margin-top: auto;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #a8ded8;
+  }
+
+  /* Contact CTA */
+  .contact-section {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--forest) 100%);
+    color: #f3efe3;
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    color: #ffffff;
+  }
+
+  .contact-section p {
+    color: #e3ded0;
+    max-width: 38rem;
+    margin: 0 auto 1.6rem auto;
+    font-size: 1.15rem;
+  }
+
+  /* Footer */
+  footer.site-footer {
+    background-color: var(--forest-dark);
+    color: #cfd8d2;
+    padding: 3.5rem 1.5rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
+    gap: 2rem;
+  }
+
+  .footer-inner h3 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-inner p {
+    color: #aab8ae;
+    font-size: 0.95rem;
+  }
+
+  footer.site-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer.site-footer ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  footer.site-footer a {
+    color: #cfd8d2;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  footer.site-footer a:hover,
+  footer.site-footer a:focus {
+    color: #a8ded8;
+  }
+
+  .connect-list li a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .connect-list svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    fill: #cfd8d2;
+  }
+
+  .connect-list a:hover svg,
+  .connect-list a:focus svg {
+    fill: #a8ded8;
+  }
+
+  .footer-bottom {
+    max-width: var(--max-width);
+    margin: 2.5rem auto 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.88rem;
+    color: #8fa093;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="site-logo">
+      <div class="logo-text">
+        <span class="logo-name">Suzanne Cottrell</span>
+        <span class="logo-sub">Poet &amp; Writer</span>
+      </div>
+      <!-- Elegant Stylized Turtle Logo in Header -->
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 12px; color: #a8ded8; opacity: 0.9;">
+         <rect x="7" y="7" width="10" height="12" rx="4"/>
+         <path d="M12 7V4a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v3"/>
+         <path d="M7 10H5a2 2 0 0 0-2 2v0a2 2 0 0 0 2 2h2"/>
+         <path d="M17 10h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2"/>
+         <path d="M7 16H5a2 2 0 0 0-2 2v0a2 2 0 0 0 2 2h2"/>
+         <path d="M17 16h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2"/>
+         <path d="M9 19l-1 2"/><path d="M15 19l1 2"/>
+      </svg>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">
+      Menu
+    </button>
+    <nav class="main-nav" id="primaryNav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="current-project.html" class="current" aria-current="page">Current Project</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="honors.html">Honors</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- Hero Section -->
+  <section class="project-hero">
+    <div class="section-inner">
+      <span class="eyebrow">Currently in Progress</span>
+      <h1>Suspended Silence</h1>
+      <p class="project-status-line">Suzanne Cottrell's fifth poetry collection</p>
+      <p class="status-copy"><em>Suspended Silence</em> is Suzanne's fifth poetry collection, forthcoming from Kelsay Books. The manuscript has been formatted into Kelsay's 6x9 publication template and is currently being proofed, while Suzanne gathers endorsement blurbs from fellow writers. There is no firm release date or purchase link set for it at this time.</p>
+    </div>
+  </section>
+
+  <!-- Lake Feature Photograph -->
+  <section class="lake-feature-section section">
+    <div class="section-inner">
+      <figure>
+        <img src="LAKE VIEW.png" alt="Trees framing a calm lake under a blue sky, photograph by Sara Anderson">
+        <figcaption>Falls Lake framing quiet waters under a clear blue sky. Photo credit: Sara Anderson.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Status Facts Grid -->
+  <section class="facts-section section">
+    <div class="section-inner">
+      <span class="section-label">Where Things Stand</span>
+      <h2 class="section-heading reveal">Project status</h2>
+      <div class="facts-grid">
+        <div class="fact-card reveal">
+          <span class="fact-label">Collection</span>
+          <p>Fifth poetry collection</p>
+        </div>
+        <div class="fact-card reveal">
+          <span class="fact-label">Publisher</span>
+          <p>Kelsay Books</p>
+        </div>
+        <div class="fact-card reveal">
+          <span class="fact-label">Status</span>
+          <p>Manuscript complete, template proofed, gathering endorsements</p>
+        </div>
+        <div class="fact-card reveal">
+          <span class="fact-label">Anticipated</span>
+          <p>2027, no firm publication date set yet</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Themes Section -->
+  <section class="theme-section section">
+    <div class="section-inner">
+      <span class="section-label">Three Threads</span>
+      <h2 class="section-heading reveal">What the collection explores</h2>
+      <p class="section-intro reveal"><em>Suspended Silence</em> gathers poems around three central themes, each rooted in close observation of the natural world.</p>
+
+      <div class="theme-block">
+        <figure class="theme-image reveal" style="margin:0;">
+          <img src="Orange Fruitilliary butterfly.jpg" alt="An orange fritillary butterfly resting on a lily blossom, photographed by Suzanne Cottrell">
+          <figcaption>Fritillary butterfly on a lily, photographed by Suzanne Cottrell.</figcaption>
+        </figure>
+        <div class="theme-copy reveal">
+          <span class="theme-kicker">Theme One</span>
+          <h2>Nature as beauty</h2>
+          <p>Poems that linger in the simple presence of the natural world, attentive to color, form, and the quiet pleasure of noticing.</p>
+        </div>
+      </div>
+
+      <div class="theme-block reverse">
+        <figure class="theme-image reveal" style="margin:0;">
+          <img src="Loblolly pine tree bark.jpg" alt="Close photograph of loblolly pine tree bark, photographed by Suzanne Cottrell">
+          <figcaption>Loblolly pine bark detail, photographed by Suzanne Cottrell.</figcaption>
+        </figure>
+        <div class="theme-copy reveal">
+          <span class="theme-kicker">Theme Two</span>
+          <h2>Nature triggers memories</h2>
+          <p>Poems that use the natural world as a doorway into personal history, where a place or a season carries the weight of what came before.</p>
+        </div>
+      </div>
+
+      <div class="theme-block">
+        <figure class="theme-image reveal" style="margin:0;">
+          <img src="2 Thanksgiving cactus blossoms (1).PNG" alt="Photograph of a blooming Thanksgiving cactus blossom, photographed by Suzanne Cottrell">
+          <figcaption>Thanksgiving cactus blossom, photographed by Suzanne Cottrell.</figcaption>
+        </figure>
+        <div class="theme-copy reveal">
+          <span class="theme-kicker">Theme Three</span>
+          <h2>A call to protect the natural world</h2>
+          <p>Poems that turn outward, asking readers to consider what is at stake in the landscapes and creatures her collection observes so closely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notes on Development -->
+  <section class="notes-section section">
+    <div class="section-inner">
+      <span class="section-label">A Note on Timing</span>
+      <h2 class="section-heading reveal">Still taking shape</h2>
+      <div class="notes-box reveal">
+        <p><em>Suspended Silence</em> is in an active stage of development. The manuscript has been formatted into Kelsay Books's publication template and is currently being proofed, while Suzanne gathers endorsement blurbs from fellow writers. Details about its final contents, structure, and publication date will be shared here as they become available.</p>
+        <p>For now, readers are welcome to follow Suzanne's ongoing writing through her Substack or to explore her existing published collections while this volume comes together.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Substack CTA -->
+  <section class="substack-section section">
+    <div class="section-inner">
+      <span class="section-label" style="color:#d3ece2;">Follow Along</span>
+      <h2 class="reveal">Writing shared along the way</h2>
+      <p class="reveal">Suzanne shares reflections and writing on Substack as <em>Suspended Silence</em> develops.</p>
+      <a class="btn btn-primary reveal" href="https://suzannecottrell1.substack.com" target="_blank" rel="noopener noreferrer">Read Suzanne's Substack</a>
+    </div>
+  </section>
+
+  <!-- Pathways -->
+  <section class="pathways-section section">
+    <div class="section-inner">
+      <span class="section-label" style="color:#8fd1cd;">Continue Exploring</span>
+      <h2 class="section-heading reveal">While you wait</h2>
+      <div class="card-grid">
+        <article class="card reveal">
+          <div>
+            <span class="card-tag">Discover</span>
+            <h3>Writing by Category</h3>
+            <p>Browse selected poems and stories organized by form.</p>
+          </div>
+          <a class="card-link" href="writing.html">Visit Writing &rarr;</a>
+        </article>
+        <article class="card reveal">
+          <div>
+            <span class="card-tag">Books</span>
+            <h3>Published Collections</h3>
+            <p>See Suzanne's four published books of poetry and prose.</p>
+          </div>
+          <a class="card-link" href="books.html">Visit Books &rarr;</a>
+        </article>
+        <article class="card reveal">
+          <div>
+            <span class="card-tag">Archive</span>
+            <h3>Full Publication History</h3>
+            <p>Browse all journals and anthologies that have published Suzanne's work.</p>
+          </div>
+          <a class="card-link" href="publications.html">Visit Publications &rarr;</a>
+        </article>
+        <article class="card reveal">
+          <div>
+            <span class="card-tag">Images</span>
+            <h3>Gallery</h3>
+            <p>A visual collection of nature photographs accompanying Suzanne's writing.</p>
+          </div>
+          <a class="card-link" href="gallery.html">Visit Gallery &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-section section">
+    <div class="section-inner">
+      <span class="section-label" style="color:#9fd6cf;">Get in Touch</span>
+      <h2 class="reveal">Questions about this project are welcome</h2>
+      <p class="reveal">Readers, editors, and event organizers are welcome to reach out through the contact page.</p>
+      <a class="btn btn-primary reveal" href="contact.html">Contact Suzanne</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h3>Suzanne Cottrell</h3>
+      <p>Author and writer working across poetry, fiction, personal narratives, and nature writing.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="honors.html">Honors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Site</h3>
+      <ul>
+        <li><a href="current-project.html">Current Project</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Connect with Suzanne</h3>
+      <ul class="connect-list">
+        <li>
+          <a href="https://www.linkedin.com/in/suzanne-cottrell-34158b6a/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.2 9.4h3.56V21H3.2zM9.5 9.4h3.41v1.59h.05c.47-.86 1.62-1.77 3.33-1.77 3.56 0 4.22 2.26 4.22 5.2V21h-3.56v-5.9c0-1.4-.02-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9.5z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.amazon.com/author/suzannesuzyberrycottrell" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h2.2l1.1 5.1L10.6 7h1.9l1.3 5.1L15 7h2.1l-2.3 9h-2l-1.3-5-1.3 5h-2L6 7zm.3 12.3c3.3 2 8.1 2.1 11.6.2.3-.2.6.1.3.4-1.9 1.7-5.4 2.9-8.6 2.9-3.1 0-5.7-1-7.3-2.6-.2-.2 0-.5.3-.3.6.4 1.1.9 1.7 1.4z"/></svg>
+            <span>Amazon Author Page</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://suzannecottrell1.substack.com" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v2.6H4V4zm0 4.6h16V11H4V8.6zM4 13h16v7l-8-4.2L4 20v-7z"/></svg>
+            <span>Substack</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/slbc.ottrell/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Suzanne Cottrell. All rights reserved.</div>
+    <div>Photos by Sara Anderson &amp; Suzanne Cottrell</div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('primaryNav');
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if ('IntersectionObserver' in window && !prefersReducedMotion) {
+      var revealElements = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealElements.forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.classList.add('in-view');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
